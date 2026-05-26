@@ -1,0 +1,65 @@
+PIPELINE EVALUATION — SEEN vs UNSEEN (data leakage adjusted)
+======================================================================
+
+Found 1410 SEEN pairs (was in training), 6590 UNSEEN pairs (true test set)
+
+
+--- Mode: specialized ---
+
+  [UNSEEN] n=6567 (good=6473, bad=94)
+    auto_accuracy:      96.66%
+    auto_decision_rate: 93.45%
+    human_review_rate:   6.55%
+    critical_FP_rate:   19.15%
+    correct_accept: 5894, correct_reject: 38
+    wrong_accept:   18 (CRITICAL), wrong_reject: 187
+
+  [SEEN] n=1410 (good=1392, bad=18)
+    auto_accuracy:      98.64%
+    auto_decision_rate: 93.97%
+    human_review_rate:   6.03%
+    critical_FP_rate:   33.33%
+    correct_accept: 1304, correct_reject: 3
+    wrong_accept:   6 (CRITICAL), wrong_reject: 12
+
+  [OVERALL] n=7977 (good=7865, bad=112)
+    auto_accuracy:      97.01%
+    auto_decision_rate: 93.54%
+    human_review_rate:   6.46%
+    critical_FP_rate:   21.43%
+    correct_accept: 7198, correct_reject: 41
+    wrong_accept:   24 (CRITICAL), wrong_reject: 199
+
+--- Mode: unified ---
+
+  [UNSEEN] n=6567 (good=6473, bad=94)
+    auto_accuracy:      97.35%
+    auto_decision_rate: 94.91%
+    human_review_rate:   5.09%
+    critical_FP_rate:    2.13%
+    correct_accept: 6055, correct_reject: 13
+    wrong_accept:   2 (CRITICAL), wrong_reject: 163
+
+  [SEEN] n=1410 (good=1392, bad=18)
+    auto_accuracy:      98.16%
+    auto_decision_rate: 96.24%
+    human_review_rate:   3.76%
+    critical_FP_rate:    5.56%
+    correct_accept: 1329, correct_reject: 3
+    wrong_accept:   1 (CRITICAL), wrong_reject: 24
+
+  [OVERALL] n=7977 (good=7865, bad=112)
+    auto_accuracy:      97.50%
+    auto_decision_rate: 95.15%
+    human_review_rate:   4.85%
+    critical_FP_rate:    2.68%
+    correct_accept: 7384, correct_reject: 16
+    wrong_accept:   3 (CRITICAL), wrong_reject: 187
+
+
+--- COMPARISON specialized vs unified (UNSEEN only) ---
+  auto_accuracy:    specialized=96.66%  unified=97.35%
+  critical_FP_rate: specialized=19.15%  unified=2.13%
+  human_review:     specialized=6.55%  unified=5.09%
+
+  WINNER (по auto_accuracy на UNSEEN): unified
