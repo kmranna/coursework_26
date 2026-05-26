@@ -1,0 +1,16 @@
+{
+  "train_csv": "train.csv",
+  "val_csv": "val.csv",
+  "backbone": "resnet50",
+  "epochs": 10,
+  "batch_size": 64,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "workers": 4,
+  "dropout": 0.5,
+  "image_size": 224,
+  "freeze_backbone": false,
+  "no_pretrained": false,
+  "patience": 3,
+  "out_dir": "runs/siamese_full"
+}

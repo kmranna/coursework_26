@@ -1,0 +1,14 @@
+{
+  "train_csv": "train_qa_curb.csv",
+  "val_csv": "val_qa_curb.csv",
+  "epochs": 10,
+  "batch_size": 32,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "workers": 4,
+  "dropout": 0.5,
+  "image_size": 224,
+  "patience": 3,
+  "no_pretrained": false,
+  "out_dir": "runs\\qa_curb"
+}
